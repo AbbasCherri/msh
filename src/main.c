@@ -3,7 +3,8 @@
 
 int main() {
 
-    take_input();
-
+    if (take_input() != 0)
+        return -1;
+    
     return 0;
 }   

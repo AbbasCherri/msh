@@ -9,12 +9,12 @@ char buffer[BUFFER_SIZE];
 
 int take_input() {
     while (1) {
-        printf("msh>");
+        printf("msh> ");
         
         if (fgets(buffer, BUFFER_SIZE, stdin) != NULL) {
             buffer[strcspn(buffer, "\n")] = '\0';
         } else {
-            printf("ERROR TAKING INPUT\n");
+            printf("\nERROR TAKING INPUT\n");
             return -1;
         }
 
