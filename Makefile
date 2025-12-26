@@ -1,6 +1,6 @@
 ROOT  := /home/Ody/projects/msh
 BUILD := $(ROOT)/build
-INC   := -I $(ROOT)/src/general_behaviour
+INC   := -I $(ROOT)/src/helpers
 
 msh: $(BUILD)/main.o $(BUILD)/input.o
 	@echo "Linking msh"
@@ -13,10 +13,10 @@ $(BUILD)/main.o: $(ROOT)/src/main.c
 	gcc -c $(ROOT)/src/main.c $(INC) -o $(BUILD)/main.o
 	@echo "Successfully Compiled main"
 
-$(BUILD)/input.o: $(ROOT)/src/general_behaviour/input.c
+$(BUILD)/input.o: $(ROOT)/src/helpers/input.c
 	@echo "Compiling the input file"
 	@mkdir -p $(BUILD)
-	gcc -c $(ROOT)/src/general_behaviour/input.c $(INC) -o $(BUILD)/input.o
+	gcc -c $(ROOT)/src/helpers/input.c $(INC) -o $(BUILD)/input.o
 	@echo "Successfully Compiled input"
 
 clean:
