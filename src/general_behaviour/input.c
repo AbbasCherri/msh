@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-void takeInput() {
+void take_input() {
     printf("Hello world\n");
-}
-
-int main () {
-
-    takeInput();
-
-    return 0;
 }
